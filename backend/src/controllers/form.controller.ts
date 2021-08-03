@@ -16,6 +16,10 @@ export default class FormController {
   }
 
   read = (req: Request, res: Response, _next: NextFunction) => {
-    res.send('asdfsad');
+    res.send('read');
+  };
+
+  write = (req: Request, res: Response, _next: NextFunction) => {
+    res.send('write');
   };
 }
