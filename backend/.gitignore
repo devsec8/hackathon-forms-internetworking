@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-node_modules/
-=======
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
@@ -49,4 +46,3 @@ db.json
 
 # Secrets
 .env
->>>>>>> 3047d2404e6e579b03e4d9858d74950c4a27725d
