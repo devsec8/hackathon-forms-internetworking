@@ -46,3 +46,6 @@ db.json
 
 # Secrets
 .env
+
+# Logs
+logs/
