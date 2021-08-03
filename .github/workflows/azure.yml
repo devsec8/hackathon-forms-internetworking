@@ -36,12 +36,19 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ env.NODE_VERSION }}
-    - name: npm install, build
+    - name: frontend npm install, build
       working-directory:
         frontend
       run: |
         npm install
         npm run build --if-present
+    - name: backend npm install
+      working-directory:
+        backend
+      run: |
+        npm install
+        npm run build
+
 
     - name: Sign in to Azure 
     # Use the GitHub secret you added
