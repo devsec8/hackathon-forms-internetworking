@@ -13,7 +13,7 @@ export default class APIController {
 
   constructor() {
     this.router.get('/', (req, res, _next) => {
-      res.send('hello world!!');
+      res.send('hello world!');
     });
   }
 }
