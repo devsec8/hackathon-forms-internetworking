@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import FormController from './form.controller';
 
 export default class APIController {
   private static _instance: APIController;
@@ -15,5 +16,7 @@ export default class APIController {
     this.router.get('/', (req, res, _next) => {
       res.send('hello world!');
     });
+
+    this.router.use('/form', FormController.instance.router);
   }
 }
