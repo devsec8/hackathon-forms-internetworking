@@ -1,4 +1,4 @@
-import { NextFunction, Router } from 'express';
+import { NextFunction, Request, Response, Router } from 'express';
 
 export default class FormController {
   private static _instance: FormController;
@@ -15,7 +15,7 @@ export default class FormController {
     this.router.get('/', this.read);
   }
 
-  const read = (req: Request, res: Response, next: NextFunction) => {
-    res.send()
-  }
+  read = (req: Request, res: Response, _next: NextFunction) => {
+    res.send('asdfsad');
+  };
 }
