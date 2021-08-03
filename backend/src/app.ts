@@ -3,6 +3,8 @@ import compression from 'compression';
 import { appConfig } from './configurations/app.config';
 import APIController from './controllers/api.controller';
 
+require('./models/user.model');
+
 export default class App {
   private static _instance: App;
   app: Express;
