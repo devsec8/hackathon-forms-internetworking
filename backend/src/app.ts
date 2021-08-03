@@ -2,6 +2,7 @@ import express, { Express } from 'express';
 import compression from 'compression';
 import { appConfig } from './configurations/app.config';
 import APIController from './controllers/api.controller';
+import { morganMiddleware } from './utils/logger.util';
 
 export default class App {
   private static _instance: App;
@@ -22,6 +23,7 @@ export default class App {
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(express.json());
     this.app.use(compression());
+    this.app.use(morganMiddleware);
 
     this.app.use('/api/v1', APIController.instance.router);
 
