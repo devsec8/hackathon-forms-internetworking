@@ -1,0 +1,52 @@
+table {
+    width: 100%;
+}
+
+.logo-image {
+    width: 250px;
+    height: auto;
+    position: absolute;
+    top: 8.9%;
+    right: 0px;
+}
+
+.forms-card {
+    margin: 2.5%;
+    width: 80%;
+    left: 10%;
+}
+
+.header-form-column {
+    background-color: #16A085;
+    color: #D0ECE7;
+    font-size: medium;
+    text-align: right;
+}
+
+.loading-spinner {
+    
+}
+
+.loading-spinner ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #16A085;
+}
+
+.data-form-column-title {
+    background-color: #FBFCFC;
+    text-align: right;
+    direction: ltr;
+}
+
+.data-form-column-category {
+    background-color: #FBFCFC;
+    color: #16A085;
+    font-weight: 500;
+    text-align: right;
+}
+
+.data-form-column-date {
+    background-color: #FBFCFC;
+    font-weight: 400;
+    text-align: right;
+}
+
