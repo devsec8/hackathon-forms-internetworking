@@ -1,7 +1,8 @@
 import { Sequelize } from 'sequelize';
+import { dbConfig } from '../configurations/app.config';
 
-const postgresDB = new Sequelize('ourProject', 'postgres', 'Aa123456', {
-  host: 'localhost',
+const postgresDB = new Sequelize(dbConfig.db, dbConfig.username, dbConfig.password, {
+  host: dbConfig.host,
   dialect: 'postgres',
 });
 

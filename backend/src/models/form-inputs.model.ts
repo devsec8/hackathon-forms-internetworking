@@ -1,15 +1,11 @@
 import { DataTypes } from 'sequelize';
-import { sequelize } from './database.model';
+import postgresDB from './database.model';
 
-const User = sequelize.define('formInputes', {
+const FormInput = postgresDB.define('formInpute', {
   formInputID: {
     type: DataTypes.INTEGER,
     primaryKey: true,
   },
-  
 });
 
-(async () => {
-  await User.sync({ force: true });
-  // Code here
-})();
+export default FormInput;
