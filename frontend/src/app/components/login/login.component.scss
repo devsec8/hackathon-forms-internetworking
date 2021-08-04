@@ -1,0 +1,130 @@
+// for phones
+.login-card {
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #D5DBDB;
+  min-width: 300px;
+  background-color: #FBFCFC;
+}
+
+#login-toolbar {
+  border-radius: 15px;
+  font-size: large;
+  justify-content: center;
+  margin-bottom: 10px;
+  background-color: #16A085;
+  color: #D0ECE7;
+  font-weight: 200;
+}
+
+.input-field {
+  border-radius: 15px;
+  padding-right: 15px;
+  font-size: medium;
+  color: #3a3735;
+}
+
+#send-button {
+  border-radius: 15px;
+  margin-top: 10px;
+  align-self: center;
+  text-align: center;
+  background-color: #0a1116;
+  color: #99dbf8;
+  font-size: medium;
+  width: 50%;
+}
+
+// for tablets
+@media screen and (min-width: 600px) {
+  .login-card {
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #D5DBDB;
+    min-width: 275;
+    background-color: #FBFCFC;
+  }
+
+  #login-toolbar {
+    border-radius: 15px;
+    font-size: x-large;
+    justify-content: center;
+    margin-bottom: 10px;
+    background-color: #16A085;
+    color: #D0ECE7;
+    font-weight: 200;
+  }
+
+  .input-field {
+    border-radius: 15px;
+    padding-right: 15px;
+    font-size: medium;
+    color: #3a3735;
+  }
+
+  #send-button {
+    border-radius: 15px;
+    margin-top: 10px;
+    align-self: center;
+    text-align: center;
+    background-color: #0a1116;
+    color: #99dbf8;
+    font-size: medium;
+    width: 50%;
+  }
+}
+
+//for desktops
+@media screen and (min-width: 1025px) {
+  .login-card {
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #D5DBDB;
+    min-width: 400px;
+    background-color: #FBFCFC;
+  }
+
+  #login-toolbar {
+    border-radius: 15px;
+    font-size: x-large;
+    justify-content: center;
+    margin-bottom: 10px;
+    background-color: #16A085;
+    color:  #D0ECE7;
+  }
+
+  .input-field {
+    padding-right: 15px;
+    font-size: medium;
+    color: #3a3735;
+  }
+
+  #send-button {
+    border-radius: 15px;
+    margin-top: 10px;
+    align-self: center;
+    text-align: center;
+    background-color:   #EAEDED;
+    color: #3a3735;
+    font-size: medium;
+    width: 40%;
+  }
+
+  #send-button:active {
+    box-shadow: 1px 1px 10px 1px;
+  }
+}
+
+.input-form {
+  border-radius: 0 28px 28px 0 !important;
+  text-align: left;
+  font-size: medium;
+  font-weight: 500;
+}
+
+.input-default-text {
+  font-weight: 400;
+}
