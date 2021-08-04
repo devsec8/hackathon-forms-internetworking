@@ -6,15 +6,15 @@
       <form class="login-form" fxLayoutAlign="strech" fxLayout="column">
           <mat-form-field class="input-form" appearance="legacy">
             <mat-label class="input-default-text">Username</mat-label>
-            <input matInput type="text" class="input-field">
+            <input matInput type="text" (keyup)="onKeyUsername($event)" class="input-field">
           </mat-form-field>
 
           <mat-form-field class="input-form" appearance="legacy">
               <mat-label class="input-default-text">Password</mat-label>
-              <input matInput type="password" class="input-field">
+              <input matInput type="password" (keyup)="onKeyPassword($event)" class="input-field">
             </mat-form-field>
 
-          <button mat-raised-button type="submit" id="send-button">Login</button>
+          <button mat-raised-button type="submit" (click)="chekCredentials()" id="send-button">Login</button>
 
       </form>
   </mat-card>
