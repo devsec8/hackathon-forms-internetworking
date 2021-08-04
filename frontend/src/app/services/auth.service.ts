@@ -10,7 +10,8 @@ export default class AuthService {
 
   getCredentialsByUsername = (username: string): Observable<Credentials> => {
     const api = 'https://c36f1db5-5fd9-4866-80c8-98182aa009de.mock.pstmn.io/form-internetworking/login?username=' + username;
-    return this.http.get<Credentials>
-      (api).pipe(map(res => {return {...res}}));
+    const cred = this.http.get<Credentials>
+      (api).pipe();
+    return cred;
   }
 }

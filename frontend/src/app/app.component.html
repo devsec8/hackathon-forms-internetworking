@@ -1,1 +1,5 @@
-<app-login></app-login>
+<body>
+    <app-login *ngIf="!authDone" (authDoneEvent)="setAuthDone($event)" (sendUsernameEvent)="setUsername($event)"></app-login>
+    <app-sidebar *ngIf="authDone"></app-sidebar>
+    <app-home *ngIf="authDone"></app-home>
+</body>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frontend';
+  authDone: boolean = false;
+  @Input() @Output() username: string = '';
+
+  public setAuthDone($event: any) {
+    this.authDone = $event;
+  }
+
+  setUsername($event: any) {
+    this.username = $event;
+  }
 }

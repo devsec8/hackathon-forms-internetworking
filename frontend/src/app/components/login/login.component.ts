@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Credentials } from '../../interfaces/credentials.interface';
 import AuthService from '../../services/auth.service';
 
@@ -8,13 +8,20 @@ import AuthService from '../../services/auth.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-username: string = '';
-password: string = '';
+  username: string = '';
+  password: string = '';
 
+  @Output() authDoneEvent = new EventEmitter<boolean>();
+  @Output() sendUsernameEvent = new EventEmitter<string>();
 
   constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
+  }
+
+  authDone(authStatus: boolean) {
+    this.authDoneEvent.emit(authStatus);
+    this.sendUsernameEvent.emit(this.username);
   }
 
   //two way binding of username and input username
@@ -39,5 +46,8 @@ password: string = '';
       //   else
       //     alert ("Wrong");
       // });
+
+    if(this.username == 'dummy' && this.password == '123456')
+      this.authDone(true);
   }
 }
