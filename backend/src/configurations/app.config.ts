@@ -1,5 +1,5 @@
 export const appConfig = {
-  port: +process.env.port || 80,
+  port: +process.env.port || 8080,
   env: process.env.NODE_ENV,
 };
 
