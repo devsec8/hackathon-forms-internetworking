@@ -1,7 +1,7 @@
 import { DataTypes } from 'sequelize';
-import { sequelize } from './database.model';
+import postgresDB from './database.model';
 
-const User = sequelize.define('user', {
+const User = postgresDB.define('user', {
   personalNumber: {
     type: DataTypes.TEXT,
     primaryKey: true,
@@ -11,7 +11,4 @@ const User = sequelize.define('user', {
   password: DataTypes.STRING,
 });
 
-(async () => {
-  await User.sync({ force: true });
-  // Code here
-})();
+export default User;

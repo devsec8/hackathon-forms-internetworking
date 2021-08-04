@@ -3,7 +3,13 @@ import compression from 'compression';
 import { appConfig } from './configurations/app.config';
 import APIController from './controllers/api.controller';
 
-require('./models/user.model');
+import DBService from './services/db.service';
+
+const initDb = async () => {
+  DBService.instance.init();
+};
+
+initDb();
 
 export default class App {
   private static _instance: App;
